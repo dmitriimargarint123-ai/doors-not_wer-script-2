@@ -300,7 +300,7 @@ task.spawn(function()
     local menu = Instance.new("Frame")
     menu.Name = "EntityMenu"
     menu.Size = UDim2.new(0, 420, 0, 470)
-    menu.Position = UDim2.new(0.5, -210, 0.5, -235)
+    menu.Position = UDim2.new(0.5, -210, 0, 8)
     menu.BackgroundColor3 = Color3.fromRGB(18, 18, 22)
     menu.BorderSizePixel = 0
     menu.Visible = true
@@ -319,17 +319,19 @@ task.spawn(function()
     title.TextXAlignment = Enum.TextXAlignment.Left
     title.Text = "🏆 DOORS ACHIEVEMENTS"
     title.TextColor3 = Color3.new(1, 1, 1)
+    title.ZIndex = 90
     title.Parent = menu
 
     local close = Instance.new("TextButton")
-    close.Size = UDim2.new(0, 34, 0, 30)
-    close.Position = UDim2.new(1, -42, 0, 7)
+    close.Size = UDim2.new(0, 44, 0, 38)
+    close.Position = UDim2.new(1, -50, 0, 6)
     close.Text = "✕"
     close.Font = Enum.Font.GothamBold
-    close.TextSize = 16
+    close.TextSize = 22
     close.TextColor3 = Color3.new(1, 1, 1)
     close.BackgroundColor3 = Color3.fromRGB(150, 45, 45)
     close.BorderSizePixel = 0
+    close.ZIndex = 100
     close.Parent = menu
     Instance.new("UICorner", close).CornerRadius = UDim.new(0, 7)
 
@@ -343,6 +345,7 @@ task.spawn(function()
     open.BackgroundColor3 = Color3.fromRGB(25, 25, 30)
     open.BorderSizePixel = 0
     open.Visible = false
+    open.ZIndex = 100
     open.Parent = gui
     Instance.new("UICorner", open).CornerRadius = UDim.new(0, 9)
 
